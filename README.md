@@ -1,3 +1,4 @@
 # RA_temp
 
-`python run_language_modeling.py --output_dir='model/' --model_type=gpt2 --model_name_or_path=gpt2 --do_train --train_data_file=train.txt --do_eval --eval_data_file=valid/txt --line_by_line`  
+` python run_clm.py     --model_name_or_path gpt2     --train_file 'train.txt'     --validation_file 'valid.txt'     --
+per_device_train_batch_size 4     --per_device_eval_batch_size 4     --do_train     --do_eval     --output_dir 'model/'`  
