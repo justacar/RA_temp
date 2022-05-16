@@ -472,7 +472,7 @@ def main():
             return metric.compute(predictions=preds, references=labels)
     special_tokens_dict = {'sep_token': '<SEP>', 'eos_token': '<EOS>'}
     num_added_toks = tokenizer.add_special_tokens(special_tokens_dict)
-
+    model.resize_token_embeddings(len(tokenizer))
     # Initialize our Trainer
     trainer = Trainer(
         model=model,
