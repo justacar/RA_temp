@@ -461,7 +461,7 @@ def main():
                 logits = logits[0]
             return logits.argmax(dim=-1)
 
-        metric = load_metric("accuracy")
+        metric = load_metric("bleu") #accuracy
 
         def compute_metrics(eval_preds):
             preds, labels = eval_preds
